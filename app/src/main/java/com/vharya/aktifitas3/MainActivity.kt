@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     private val users = arrayListOf(
-        Users("Dodi Kurniawan", "Jl Kewangi No. 5", "Pria"),
-        Users("Kevin Prasetyo", "Perum Jatibadi Blok F No. 12", "Pria"),
-        Users("Susie Setiawati", "Jl Primadi Gg. 4, No. 11", "Wanita"),
-        Users("Budi Pratama", "Perumahan Tribudi Blok C No. 10", "Pria"),
-        Users("Enik Kurniawan", "Perum Kepuh Blok E No. 5", "Wanita"),
+        Users("Dodi Kurniawan", "30", "Jl Kewangi No. 5", "Pria"),
+        Users("Kevin Prasetyo", "28", "Perum Jatibadi Blok F No. 12", "Pria"),
+        Users("Susie Setiawati", "27", "Jl Primadi Gg. 4, No. 11", "Wanita"),
+        Users("Budi Pratama", "31", "Perumahan Tribudi Blok C No. 10", "Pria"),
+        Users("Enik Kurniawan", "29", "Perum Kepuh Blok E No. 5", "Wanita"),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +29,6 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView: RecyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = UserAdapter(users)
+        recyclerView.adapter = UserAdapter(this, users)
     }
 }
